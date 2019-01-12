@@ -1,0 +1,52 @@
+#include <stdio.h>
+int main()
+{
+    int x1,v1,x2,v2,i,sum,sum1,flag=0;
+    scanf("%d %d %d %d",&x1,&v1,&x2,&v2);
+    sum=x1;sum1=x2;
+    for(i=0;i<10000;i++)
+    {
+        if(x2>x1)
+        {
+            if(v2>v1)
+            {
+                printf("NO");
+                flag=1;
+                break;
+            }
+            else
+            {
+                sum+=v1;
+                sum1+=v2;
+                if(sum==sum1)
+                {
+                    printf("YES");
+                    flag=1;
+                    break;
+                }
+            }
+        }
+        else
+        {
+            if(v1>v2)
+            {
+                printf("NO");
+                flag=1;
+                break;
+            }
+            else
+            {
+                sum+=v1;
+                sum1+=v2;
+                if(sum==sum1)
+                {
+                    printf("YES");
+                    flag=1;
+                    break;
+                }
+            }
+        }
+    }
+    if(flag==0)
+        printf("NO");
+}
