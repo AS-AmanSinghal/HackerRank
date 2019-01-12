@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int a[1000][1000],n,i,j,sum=0,sum1=0,sum2=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&a[i][j]);
+        if(i==j)
+                sum+=a[i][j];
+        if((i+j)==(n-1))
+                    sum1+=a[i][j];
+    }
+    }
+    sum2=abs(sum-sum1);
+    printf("%d",sum2);
+}
