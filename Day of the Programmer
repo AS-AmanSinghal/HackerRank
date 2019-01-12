@@ -1,0 +1,56 @@
+#include <stdio.h>
+int main()
+{
+    int year,a[]={31,28,31,30,31,30,31,31},i,sum=0,sub=0,dd,mm,yyyy;
+    scanf("%d",&year);
+    if(year<1918)
+    {
+        if(year%4==0)
+            a[1]=29;
+    }
+    else
+    {
+        if(year>1918)
+    {
+        if((year%4==0)&&(year%100!=0))
+            a[1]=29;
+        else
+        {
+            if(year%400==0)
+                a[1]=29;
+        }
+    }
+        else
+            a[1]=27;
+    }
+        
+    if(a[1]==29)
+        sub=12;
+    else
+    {
+        if(a[1]==28)
+        sub=13;
+        else
+            sub=26;
+    }
+    if(sub>0)
+    {
+        dd=sub;
+        mm=9;
+        yyyy=year;
+    }
+    if(dd>=1&&dd<=9)
+        printf("0%d.%d.%d",dd,mm,yyyy);
+    else
+    {
+        if(mm>=1&&mm<=9)
+        printf("%d.0%d.%d",dd,mm,yyyy);
+        else
+        {
+            if((dd>=1&&dd<=9)&&(mm>=1&&mm<=9))
+                printf("%d.0%d.0%d",dd,mm,yyyy);
+            else
+                printf("%d.%d.%d",dd,mm,yyyy);
+        }
+    }
+}
