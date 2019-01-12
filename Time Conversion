@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+    int hr,min,sec;
+    char time[12];
+    scanf("%d:%d:%d%s",&hr,&min,&sec,time);
+    if (strcmp(time,"PM")==0 && hr!=12) hr += 12 ;
+    if (strcmp(time,"AM")==0 && hr==12) hr = 0 ;
+        
+    printf("%02d:%02d:%02d", hr, min, sec) ;
+}
