@@ -1,0 +1,47 @@
+#include<stdio.h>
+int main()
+{
+    char a[200],b[200];
+    int i,n,d=0,c=0;
+    scanf("%s",a);
+    scanf("%s",b);
+    scanf("%d",&n);
+    for(i=0;a[i]!='\0';i++)
+    {
+        if(a[i]==b[i])
+        {
+          a[i]=b[i];
+            c++;
+        } 
+        else
+        {
+            a[i]=b[i];
+            d++;
+        }
+    }
+    if(a[i]=='\0'&&b[i]!='\0')
+        printf("No");
+    else
+    {
+    if(d==0&&c==0)
+        printf("No");
+    else 
+    {
+        if(d==1)
+        printf("No");
+        else
+        {
+            if(n>d)
+                    printf("Yes");
+            else
+            {
+                if(d!=0&&c!=0)
+                printf("No");
+            else
+                if(c<n)
+                    printf("Yes");
+            }
+        }
+    }
+}
+}
