@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{
+    long long int i,a[20000],sum,j,b[20000],temp;
+    for(i=0;i<5;i++)
+        scanf("%lld",&a[i]);
+    for(i=0;i<5;i++)
+    {
+        sum=0;
+        for(j=0;j<5;j++)
+        {
+            if(i!=j)
+                sum+=a[j];
+        }
+        b[i]=sum;
+    }
+    for(i=0;i<5;i++)
+    {
+        for(j=0;j<4;j++)
+        {
+            if(b[j]>b[j+1])
+            {
+                temp=b[j];
+                b[j]=b[j+1];
+                b[j+1]=temp;
+            }
+        }
+    }
+    printf("%lld %lld",b[0],b[4]);
+}
