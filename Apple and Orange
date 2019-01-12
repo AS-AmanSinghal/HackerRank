@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main()
+{
+    int s,t,a,b,m,n,i,x[1000000],y[1000000],sum=0,c=0,d=0;
+    scanf("%d %d\n",&s,&t);
+    scanf("%d %d\n",&a,&b);
+    scanf("%d %d\n",&m,&n);
+    for(i=0;i<m;i++)
+        scanf("%d",&x[i]);
+    for(i=0;i<n;i++)
+        scanf("%d",&y[i]);
+    for(i=0;i<m;i++)
+    {
+        sum=a+x[i];
+        if(sum>=s&&sum<=t)
+            c++;
+    }
+    for(i=0;i<n;i++)
+    {
+        sum=b+y[i];
+        if(sum>=s&&sum<=t)
+            d++;
+    }
+    printf("%d \n%d",c,d);
+}
