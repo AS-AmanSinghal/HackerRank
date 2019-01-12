@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    int n,i,b=0,c=0,d=0,a[2000];
+    float positive,negative,zero;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+        if(a[i]==0)
+            d++;
+        else
+        {
+            if(a[i]<0)
+                c++;
+            else
+                b++;
+        }
+    }
+    positive=(float)b/n;
+    negative=(float)c/n;
+    zero=(float)d/n;
+    printf("%f\n%f\n%f",positive,negative,zero);
+}
