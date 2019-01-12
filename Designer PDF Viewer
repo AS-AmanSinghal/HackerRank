@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class pdf
+{
+    public static void main(String args[])
+    {
+        int i,max=0;
+        String b;
+        Scanner s=new Scanner(System.in);
+        int a[]=new int[124];
+        String S;
+        for(i=97;i<123;i++)
+        {
+            a[i]=s.nextInt();
+        }
+        b=s.nextLine();
+        S=s.nextLine();
+        int ascii=0;
+        max=a[97];
+        for(i=0;i<S.length();i++)
+        {
+            ascii=S.charAt(i);
+            if(max<a[ascii])
+            {
+                max=a[ascii];
+            }
+        }
+        int mul=max*(S.length());
+        System.out.println(mul);
+    }
+}
