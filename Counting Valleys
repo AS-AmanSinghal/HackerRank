@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+    long long int n,i,c=0,count=0,j;
+    scanf("%lld",&n);
+    char ch[n];
+    for(i=0;i<n;i++)
+        scanf("%c",&ch[i]);
+    for(i=0;i<n;i++)
+    {
+        if(ch[i]=='D')
+        {
+            c--;
+            if(c==0)
+                count++;
+        }
+        
+        else
+        {
+            c++;
+        }
+    }
+    if(count>0)
+    printf("%lld",count);
+    else
+        printf("%lld",0);
+}
