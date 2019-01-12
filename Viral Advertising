@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+import static java.lang.Math.floor;
+
+public class Viral_Ad {
+    public static void main(String[] args) {
+        int day = 2, shared = 5, liked = shared / 2, cumulative = 0;
+        cumulative += liked;
+        Scanner s = new Scanner(System.in);
+        int days = s.nextInt();
+        while (day <= days) {
+            shared = (int) Math.floor(liked * 3);
+            liked = shared / 2;
+            cumulative += liked;
+            day++;
+        }
+        System.out.println(cumulative);
+    }
+}
