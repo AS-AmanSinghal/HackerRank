@@ -1,0 +1,47 @@
+package Save_The_Prisoner;
+
+import java.util.Scanner;
+
+public class Save_The_Prisoner
+{
+    public static void main(String[] args)
+    {
+        int i,prisoner,candy=0,start=0,number=0;
+        Scanner s=new Scanner(System.in);
+        int testcase=s.nextInt();
+        for(i=0;i<testcase;i++)
+        {
+            prisoner=s.nextInt();
+            candy=s.nextInt();
+            start=s.nextInt();
+            if((start+candy-1)%prisoner==0)
+                System.out.println(prisoner);
+            else
+                System.out.println((start+candy-1)%prisoner);
+//            if(candy>prisoner)
+//            {
+//                candy=candy%prisoner;
+//            }
+//            for(int j=start;j<=prisoner;j++)
+//            {
+//                candy--;
+//                if(candy==0)
+//                {
+//                    number=j;
+//                }
+//            }
+//            if(candy!=0)
+//            {
+//                for(int j=1;j<start;j++)
+//                {
+//                    candy--;
+//                    if(candy==0)
+//                    {
+//                        number=j;
+//                    }
+//                }
+//            }
+//            System.out.println(number);
+        }
+    }
+}
