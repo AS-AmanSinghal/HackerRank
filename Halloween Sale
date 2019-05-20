@@ -1,0 +1,34 @@
+package Halloween_Sale;
+
+import java.util.Scanner;
+
+public class Halloween_Sale
+{
+    public static void main(String[] args) {
+        int count = 0, i = 0, difference = 0;
+        Scanner sc = new Scanner(System.in);
+        int p = sc.nextInt();
+        int d = sc.nextInt();
+        int m = sc.nextInt();
+        int s = sc.nextInt();
+        if(p>s)
+        {
+            System.out.println(count);
+        }
+        else
+        {
+            int sum = 0;
+            for (i = p; i >=m; i -= d) {
+                sum += i;
+                //System.out.println(i + " ");
+                count++;
+            }
+            while(sum<=s)
+            {
+                count++;
+                sum+=m;
+            }
+            System.out.println(count-1);
+        }
+    }
+}
