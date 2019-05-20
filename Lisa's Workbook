@@ -1,0 +1,38 @@
+package Lisa_Workshop;
+
+import java.util.Scanner;
+
+public class Lisa_Workbook
+{
+    public static void main(String[] args)
+    {
+        int page=1,count=0;
+        Scanner s=new Scanner(System.in);
+        int chapter=s.nextInt();
+        int max_question=s.nextInt();
+        int [] a=new int[chapter];
+        for (int i=0;i<chapter;i++)
+        {
+            a[i]=s.nextInt();
+        }
+        for(int i=0;i<chapter;i++)
+        {
+            for(int j=1;j<=a[i];j++)
+            {
+                if(j==page)
+                {
+                    count++;
+                }
+                if(j%max_question==0)
+                {
+                    page++;
+                }
+            }
+            if(a[i]%max_question!=0)
+            {
+                page++;
+            }
+        }
+        System.out.println(count);
+    }
+}
